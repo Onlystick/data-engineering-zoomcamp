@@ -1,3 +1,1 @@
-**data-engineering-zoomcamp**
-__________________________________________________________
-Data engineering zoomcamp course (workshops and solutions)
+**data-engineering-zoomcamp** - https://github.com/DataTalksClub/data-engineering-zoomcamp
