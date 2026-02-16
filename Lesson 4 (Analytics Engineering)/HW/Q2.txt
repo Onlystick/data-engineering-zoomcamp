@@ -1,0 +1,39 @@
+uv run dbt test --select fct_trips --target prod
+
+15:53:22  Running with dbt=1.11.5
+15:53:23  Registered adapter: duckdb=1.10.0
+15:53:25  Found 8 models, 2 seeds, 34 data tests, 2 sources, 618 macros
+15:53:25  
+15:53:25  Concurrency: 1 threads (target='prod')
+15:53:25  
+15:53:25  1 of 10 START test accepted_values_fct_trips_payment_type__False__1__2__3__4__5  [RUN]
+15:53:26  1 of 10 FAIL 1 accepted_values_fct_trips_payment_type__False__1__2__3__4__5 .... [FAIL 1 in 0.95s]
+15:53:26  2 of 10 START test accepted_values_fct_trips_service_type__Green__Yellow ....... [RUN]
+15:53:27  2 of 10 PASS accepted_values_fct_trips_service_type__Green__Yellow ............. [PASS in 1.01s]
+15:53:27  3 of 10 START test not_null_fct_trips_pickup_datetime .......................... [RUN]
+15:53:27  3 of 10 PASS not_null_fct_trips_pickup_datetime ................................ [PASS in 0.07s]
+15:53:27  4 of 10 START test not_null_fct_trips_service_type ............................. [RUN]
+15:53:27  4 of 10 PASS not_null_fct_trips_service_type ................................... [PASS in 0.06s]
+15:53:27  5 of 10 START test not_null_fct_trips_total_amount ............................. [RUN]
+15:53:27  5 of 10 PASS not_null_fct_trips_total_amount ................................... [PASS in 0.06s]
+15:53:27  6 of 10 START test not_null_fct_trips_trip_id .................................. [RUN]
+15:53:28  6 of 10 PASS not_null_fct_trips_trip_id ........................................ [PASS in 0.06s]
+15:53:28  7 of 10 START test not_null_fct_trips_vendor_id ................................ [RUN]
+15:53:28  7 of 10 PASS not_null_fct_trips_vendor_id ...................................... [PASS in 0.06s]
+15:53:28  8 of 10 START test relationships_fct_trips_dropoff_location_id__location_id__ref_dim_zones_  [RUN]
+15:53:29  8 of 10 PASS relationships_fct_trips_dropoff_location_id__location_id__ref_dim_zones_  [PASS in 1.45s]
+15:53:29  9 of 10 START test relationships_fct_trips_pickup_location_id__location_id__ref_dim_zones_  [RUN]
+15:53:30  9 of 10 PASS relationships_fct_trips_pickup_location_id__location_id__ref_dim_zones_  [PASS in 1.28s]
+15:53:30  10 of 10 START test unique_fct_trips_trip_id ................................... [RUN]
+15:53:57  10 of 10 PASS unique_fct_trips_trip_id ......................................... [PASS in 26.79s]
+15:53:57  
+15:53:57  Finished running 10 data tests in 0 hours 0 minutes and 32.46 seconds (32.46s).
+15:53:58  
+15:53:58  Completed with 1 error, 0 partial successes, and 0 warnings:
+15:53:58  
+15:53:58  Failure in test accepted_values_fct_trips_payment_type__False__1__2__3__4__5 (models/marts/schema.yml)
+15:53:58    Got 1 result, configured to fail if != 0
+15:53:58  
+15:53:58    compiled code at target/compiled/taxi_rides_ny/models/marts/schema.yml/accepted_values_fct_trips_payment_type__False__1__2__3__4__5.sql
+15:53:58  
+15:53:58  Done. PASS=9 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=10

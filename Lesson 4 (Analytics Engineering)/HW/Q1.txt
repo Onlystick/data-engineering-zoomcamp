@@ -1,0 +1,19 @@
+uv run dbt run --select int_trips_unioned --target prod
+
+
+15:45:36  Running with dbt=1.11.5
+15:45:38  Registered adapter: duckdb=1.10.0
+15:45:38  Unable to do partial parsing because config vars, config profile, or config target have changed
+15:45:38  Unable to do partial parsing because profile has changed
+15:45:48  Found 8 models, 2 seeds, 33 data tests, 2 sources, 618 macros
+15:45:48  
+15:45:48  Concurrency: 1 threads (target='prod')
+15:45:48  
+15:45:48  1 of 1 START sql table model prod.int_trips_unioned ............................ [RUN]
+15:47:02  1 of 1 OK created sql table model prod.int_trips_unioned ....................... [OK in 74.32s]
+15:47:03  
+15:47:03  Finished running 1 table model in 0 hours 1 minutes and 14.89 seconds (74.89s).
+15:47:03  
+15:47:03  Completed successfully
+15:47:03  
+15:47:03  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
